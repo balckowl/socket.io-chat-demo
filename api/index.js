@@ -8,7 +8,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
     // originsオプションを設定してCORSを有効にする
     cors: {
-        origin: ['http://localhost:5175', 'http://localhost:5176'],
+        origin: ['https://socket-io-chat-demo.vercel.app/'],
         methods: ['GET', 'POST'], // 許可するHTTPメソッドを指定
     },
 });
