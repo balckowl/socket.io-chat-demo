@@ -6,10 +6,9 @@ import { Server } from 'socket.io';
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
-    // originsオプションを設定してCORSを有効にする
     cors: {
-        origin: ['https://socket-io-chat-demo.vercel.app/'],
-        methods: ['GET', 'POST'], // 許可するHTTPメソッドを指定
+        origin: ['https://socket-io-chat-demo.vercel.app'],
+        methods: ['GET', 'POST'], 
     },
 });
 
