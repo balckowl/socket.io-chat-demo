@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 function App() {
 
-  const socket = io('http://localhost:3002');
+  const socket = io('http://localhost:3000');
   const [postChat, setPostChat] = useState('');
   const [getChat, setGetChat] = useState([]);
 

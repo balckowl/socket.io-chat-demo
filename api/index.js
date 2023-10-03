@@ -13,7 +13,7 @@ const io = new Server(server, {
     },
 });
 
-const PORT = 3002;
+const PORT = 3000;
 
 app.use(cors());
 
