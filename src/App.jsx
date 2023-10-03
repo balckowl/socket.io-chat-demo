@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 function App() {
 
-  const socket = io('https://socket-io-chat-demo.vercel.app/');
+  const socket = io('http://localhost:3002');
   const [postChat, setPostChat] = useState('');
   const [getChat, setGetChat] = useState([]);
 
@@ -29,7 +29,7 @@ function App() {
   return (
       <div>
         <div className="container">
-
+          
           <form name="myform" onSubmit={handleSubmit}>
             <input name="text" type="text" value={postChat} onChange={(e) => setPostChat(e.target.value)} />
             <button name="btn">送信</button>
