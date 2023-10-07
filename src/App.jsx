@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 function App() {
 
-  const socket = io('http://localhost:3000');
+  const socket = io('https://socket-io-chat-demo.vercel.app');
   const [postChat, setPostChat] = useState('');
   const [getChat, setGetChat] = useState([]);
 
