@@ -3,7 +3,7 @@ import io from 'socket.io-client';
 import './App.css';
 
 function App() {
-  const socket = io('https://socket-io-chat-demo.vercel.app');
+  const socket = io('http://localhost:3000');
   const [postChat, setPostChat] = useState('');
   const [getChat, setGetChat] = useState([]);
 
