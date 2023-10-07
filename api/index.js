@@ -8,13 +8,17 @@ const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
         origin: ['https://socket-io-chat-demo.vercel.app'],
-        methods: ['GET', 'POST'], 
+        methods: ['GET', 'POST'],
     },
 });
 
 const PORT = 3000;
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://socket-io-chat-demo.vercel.app',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+}));
 
 io.on('connection', (socket) => {
 
